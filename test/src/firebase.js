@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB5uwIv8O7mnpFTYdHmClqRbtlm5B6RbdI",
-  authDomain: "sparta-react-demo-54fdc.firebaseapp.com",
-  projectId: "sparta-react-demo-54fdc",
-  storageBucket: "sparta-react-demo-54fdc.appspot.com",
-  messagingSenderId: "378163445007",
-  appId: "1:378163445007:web:ae3cd777a8081425e6927a",
-  measurementId: "G-B5FRBNC06H"
+  apiKey: "AIzaSyDYxYpJiqgJyN3oy6hWC4l3fuq3prdG9ps",
+  authDomain: "voca-3d2b0.firebaseapp.com",
+  projectId: "voca-3d2b0",
+  storageBucket: "voca-3d2b0.appspot.com",
+  messagingSenderId: "478233250942",
+  appId: "1:478233250942:web:fa425fb6e51bb3113d9c2f",
+  measurementId: "G-SDZ96J4X1N"
 };
 
 // firebaseConfig 정보로 firebase 시작

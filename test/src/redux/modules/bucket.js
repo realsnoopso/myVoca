@@ -63,7 +63,7 @@ export function loadBucket(bucket_list) {
 export const loadBucketFB = () => {
   return async function (dispatch) {
     // 데이터를 가져와요!
-    const bucket_data = await getDocs(collection(db, "bucket"));
+    const bucket_data = await getDocs(collection(db, "vocas"));
     
     let bucket_list  = [];
 
@@ -77,5 +77,17 @@ export const loadBucketFB = () => {
     // 잘 만들어졌는 지 리스트도 확인해봐요! :)
     console.log(bucket_list);
     dispatch(loadBucket(bucket_list));
+  }
+}
+
+// 파이어베이스랑 통신하는 부분
+export const addBucketFB = (bucket) => {
+  return async function (dispatch) {
+		// 파이어스토어에 추가하기를 기다려요!
+    const docRef = await addDoc(collection(db, "vocas"), bucket);
+		// 추가한 데이터 중 id를 가져와서 bucket_data를 만들어줬어요!
+    const bucket_data = { id: docRef.id, ...bucket };
+		// 그럼 이제 액션을 일으키자! (수정해달라고 요청하자!)
+    dispatch(createBucket(bucket_data));
   }
 }

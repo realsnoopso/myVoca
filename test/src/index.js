@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
+import './style.css'
 
 
 // 우리의 버킷리스트에 리덕스를 주입해줄 프로바이더를 불러옵니다!
