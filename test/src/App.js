@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Link, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Add from './pages/Add';
+import Nopage from './pages/Nopage';
+
 
 function App() {
-  return (
+  
+  return (  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Link to="/">잘 외워지는 단어장</Link>
       </header>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/add" element={<Add />}/>
+        <Route path="*" element={<Nopage />} />
+      </Routes>
     </div>
   );
 }
